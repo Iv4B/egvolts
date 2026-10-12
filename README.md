@@ -11,7 +11,9 @@ npm ci
 npm run dev
 ```
 
-Edit `app/app.vue` to build the page. Page metadata lives in `nuxt.config.ts`.
+Edit `app/app.vue` to update the About me, Past projects, Skills, and Contacts sections. The current copy and project examples are illustrative; replace the sample email and location before publishing. Contacts use a direct email link, with no form.
+
+The logo is recreated as scalable SVG artwork in `public/egvolts-logo.svg` and `public/egvolts-mark.svg`. Its wordmark uses a system-font approximation of the reference. The charcoal (`#34424a`), grey (`#818b91`), and lime (`#afc448`) palette and responsive layouts live in `app/assets/css/main.css`. Page metadata lives in `nuxt.config.ts`.
 
 ## Static output
 
