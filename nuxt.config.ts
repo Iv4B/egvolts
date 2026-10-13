@@ -6,9 +6,9 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
-      title: 'EGVolts — Electrical installation & service',
-      htmlAttrs: { lang: 'en' },
-      meta: [{ name: 'description', content: 'Meet EGVolts. Explore electrical installation, lighting, maintenance, and repair project examples, and get in touch directly.' }],
+      title: 'EGVolts — Elektroinstalācija un apkalpošana',
+      htmlAttrs: { lang: 'lv' },
+      meta: [{ name: 'description', content: 'Iepazīstiet EGVolts. Apskatiet elektroinstalācijas, apgaismojuma, apkopes un remonta projektu piemērus un sazinieties tieši.' }],
     },
   },
   nitro: { preset: 'static' },
