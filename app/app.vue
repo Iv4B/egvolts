@@ -76,7 +76,7 @@ const skills = [
 
     <section id="projects" class="projects section" aria-labelledby="projects-title"><div class="container">
       <div class="section-label"><span>02 / PAVEIKTIE PROJEKTI</span><span class="label-line" /></div>
-      <div class="section-heading"><h2 id="projects-title">Darbi tuvplānā.</h2><p>Elektroinstalācijas un sadalņu fotogalerija.<br>Izvēlieties attēlu, lai apskatītu to tuvāk.</p></div>
+      <div class="section-heading"><h2 id="projects-title">Darbi tuvplānā.</h2></div>
       <ProjectGallery />
     </div></section>
 
