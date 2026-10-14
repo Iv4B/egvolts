@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-10-12',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  // Set /egvolts/ during Pages builds; local development stays at /.
+  // The custom domain egvolts.lv serves the site at /.
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {

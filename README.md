@@ -18,7 +18,7 @@ The logo is recreated as scalable SVG artwork in `public/egvolts-logo.svg` and `
 ## Static output
 
 ```sh
-NUXT_APP_BASE_URL=/egvolts/ npm run generate
+NUXT_APP_BASE_URL=/ npm run generate
 ```
 
 Upload `.output/public` to static hosting. It includes prerendered HTML, JavaScript, CSS, and `.nojekyll`; no Node server is required. For local root-path previews, run `npm run generate` and `npm run preview`.
@@ -27,5 +27,4 @@ Upload `.output/public` to static hosting. It includes prerendered HTML, JavaScr
 
 In this repository's **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. The Pages workflow builds pull requests and deploys pushes to `main`, or can be run manually. If the default branch differs, update the workflow's push branch.
 
-The expected site URL is https://iv4b.github.io/egvolts/.
-For a custom domain, set the workflow's `NUXT_APP_BASE_URL` to `/` and configure the domain in Pages settings.
+The production URL is https://egvolts.lv/. The workflow uses `NUXT_APP_BASE_URL=/` because the custom domain serves the site at its root. Keep `egvolts.lv` configured in Pages settings. If switching back to the default project URL without a custom domain, change the build base path to `/egvolts/`.
