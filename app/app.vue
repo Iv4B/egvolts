@@ -94,7 +94,6 @@ const skills = [
     <div class="company-details">
       <h3>SIA EG Volts</h3>
       <p>Reģistrācijas Nr.: 40203784193</p>
-      <p>PVN maksātāja Nr.: LV40203784193</p>
       <address>Straupes iela 10A, Valmiera, Valmieras nov., LV-4201</address>
     </div>
   </footer>
