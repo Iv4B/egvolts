@@ -81,7 +81,6 @@ h3 { font-size: 23px; letter-spacing: -.03em; margin-bottom: 12px; }
 .skill-index { color: #68752c; font-size: 14px; margin-top: 5px; }
 .skill-list h3 { font-size: 21px; }
 .skill-list p { font-size: 16px; color: #616d73; margin: 0; max-width: 380px; }
-.skill-plus { margin-left: auto; color: #68752c; font-size: 20px; }
 .contact { background: var(--ink); color: #f6f7f2; padding-block: 90px; }
 .contact-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 100px; align-items: center; }
 .contact .eyebrow { color: var(--lime); }
