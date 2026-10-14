@@ -93,6 +93,7 @@ const skills = [
       <h3>SIA EG Volts</h3>
       <p>Reģistrācijas Nr.: 40203784193</p>
       <address>Straupes iela 10A, Valmiera, Valmieras nov., LV-4201</address>
+      <PrivacyNotice />
     </div>
   </footer>
   <button v-if="showBackToTop" class="back-to-top" :style="{ transform: `translateY(-${footerOverlap}px)` }" type="button" aria-label="Atgriezties augšā" title="Atgriezties augšā" @click="backToTop">
