@@ -119,10 +119,20 @@ h3 { font-size: 23px; letter-spacing: -.03em; margin-bottom: 12px; }
   .service-strip .strip-bolt { display: none; }
 }
 @media (max-width: 480px) {
-  nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; }
-  nav .nav-contact { justify-content: space-between; }
   .hero-actions { flex-wrap: wrap; }
   .hero-caption { letter-spacing: .08em; }
   .principles { grid-template-columns: 1fr; }
   .principles b { display: inline; }
+}
+
+.menu-toggle { display: none; }
+@media (width < 600px) {
+  .site-header { flex-wrap: wrap; justify-content: space-between; gap: 0; padding-block: 16px; }
+  .menu-toggle { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 14px; border: 1px solid var(--ink); border-radius: 3px; background: transparent; color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; }
+  .menu-toggle:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+  .menu-toggle svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+  #main-navigation { display: none; width: 100%; padding-top: 20px; margin-top: 16px; border-top: 1px solid var(--line); }
+  #main-navigation.is-open { display: flex; flex-direction: column; align-items: stretch; gap: 4px; }
+  #main-navigation a { padding: 14px; font-size: 16px; }
+  #main-navigation .nav-contact { justify-content: space-between; margin-top: 8px; }
 }
