@@ -2,6 +2,20 @@
 const baseURL = useRuntimeConfig().app.baseURL
 const menuOpen = ref(false)
 const menuToggle = ref<HTMLButtonElement | null>(null)
+const topLink = ref<HTMLAnchorElement | null>(null)
+const showBackToTop = ref(false)
+function updateScrollPosition() {
+  showBackToTop.value = window.scrollY > 200
+}
+onMounted(() => {
+  updateScrollPosition()
+  window.addEventListener('scroll', updateScrollPosition, { passive: true })
+})
+onBeforeUnmount(() => window.removeEventListener('scroll', updateScrollPosition))
+function backToTop() {
+  topLink.value?.focus({ preventScroll: true })
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
+}
 function closeMenuWithKeyboard() {
   if (!menuOpen.value) return
   menuOpen.value = false
@@ -23,7 +37,7 @@ const skills = [
 <template>
   <a class="skip-link" href="#main">Pāriet uz saturu</a>
   <header class="site-header" @keydown.esc="closeMenuWithKeyboard">
-    <a class="brand" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="180" height="100"></a>
+    <a ref="topLink" class="brand" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="180" height="100"></a>
     <button ref="menuToggle" class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-controls="main-navigation" :aria-label="menuOpen ? 'Aizvērt izvēlni' : 'Atvērt izvēlni'" @click="menuOpen = !menuOpen">
       <span>{{ menuOpen ? 'Aizvērt' : 'Izvēlne' }}</span>
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path v-if="menuOpen" d="m6 6 12 12M6 18 18 6" /><path v-else d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -80,5 +94,8 @@ const skills = [
     <section id="contact" class="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">04 / KONTAKTI</p><h2 id="contact-title">Veidosim<br>labu sadarbību<span class="lime">.</span></h2><p>Ir iecere? Sāksim ar sarunu.</p></div><div class="contact-details"><p class="contact-note">Kontaktinformācijas paraugs — aizstājiet pirms publicēšanas.</p><a href="mailto:hello@egvolts.example"><small>E-PASTS</small><span>hello@egvolts.example <b aria-hidden="true"><ArrowIcon /></b></span></a><div class="contact-location"><small>ATRAŠANĀS VIETA</small><span>Jūsu pilsēta, Latvija</span></div><p>Bez veidlapām. Vienkārši sazinieties tieši.</p></div></div></section>
   </main>
 
-  <footer class="container site-footer"><a href="#" aria-label="Atgriezties augšā"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="140" height="78"></a><p>Elektroinstalācija un apkalpošana</p><a class="text-link" href="#">Atgriezties augšā ↑</a></footer>
+  <footer class="container site-footer"><a href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="140" height="78"></a><p>Elektroinstalācija un apkalpošana</p></footer>
+  <button v-if="showBackToTop" class="back-to-top" type="button" aria-label="Atgriezties augšā" title="Atgriezties augšā" @click="backToTop">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </button>
 </template>
