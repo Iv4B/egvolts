@@ -57,13 +57,12 @@ const skills = [
         <h1 id="hero-title">Kvalitatīvs darbs.<br>Uzticami savienojumi<span class="lime">.</span></h1>
         <p class="hero-description">Pārdomāti elektrodarbi jūsu mājoklim un darba telpām. No pirmā vada līdz pēdējai detaļai.</p>
         <div class="hero-actions"><a class="button" href="#projects">Apskatīt projektus <span aria-hidden="true"><ArrowIcon /></span></a><a class="text-link" href="#contact">Sazināties <span aria-hidden="true"><ArrowIcon /></span></a></div>
-        <p class="hero-caption">ELEKTROINSTALĀCIJA UN APKALPOŠANA</p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="art-grid" />
         <svg class="circuit" viewBox="0 0 500 550" fill="none"><path d="M0 120H110V220H200M500 410H400V320H300M80 550V420H165M425 0V115H335" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="120" r="5"/><circle cx="400" cy="410" r="5"/><circle cx="165" cy="420" r="5"/><circle cx="335" cy="115" r="5"/></svg>
         <img class="hero-symbol" :src="`${baseURL}egvolts-mark.svg`" alt="" width="340" height="180">
-        <span class="art-label">PRECIZITĀTE KATRĀ SAVIENOJUMĀ</span><span class="art-coordinate">EG / 01</span>
+        <span class="art-label">PRECIZITĀTE KATRĀ SAVIENOJUMĀ</span>
       </div>
     </section>
 
