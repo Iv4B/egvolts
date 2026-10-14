@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Edit `app/app.vue` to update the About me, Past projects, Skills, and Contacts sections. The current copy and project examples are illustrative; replace the sample email and location before publishing. Contacts use a direct email link, with no form.
+Edit `app/app.vue` to update the About me, Past projects, Skills, and Contacts sections. The introduction and service copy are illustrative; replace the sample email and location before publishing. Contacts use a direct email link, with no form.
 
 The logo is recreated as scalable SVG artwork in `public/egvolts-logo.svg` and `public/egvolts-mark.svg`. Its wordmark uses a system-font approximation of the reference. The charcoal (`#34424a`), grey (`#818b91`), and lime (`#afc448`) palette and responsive layouts live in `app/assets/css/main.css`. Page metadata lives in `nuxt.config.ts`.
 
@@ -28,3 +28,7 @@ Upload `.output/public` to static hosting. It includes prerendered HTML, JavaScr
 In this repository's **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. The Pages workflow builds pull requests and deploys pushes to `main`, or can be run manually. If the default branch differs, update the workflow's push branch.
 
 The production URL is https://egvolts.lv/. The workflow uses `NUXT_APP_BASE_URL=/` because the custom domain serves the site at its root. Keep `egvolts.lv` configured in Pages settings. If switching back to the default project URL without a custom domain, change the build base path to `/egvolts/`.
+
+## Project gallery
+
+The Projects section uses the six supplied photos in `public/projects/`. Edit photo filenames, Latvian captions, descriptions, and dimensions in `app/components/ProjectGallery.vue`. The slider supports previous/next controls, thumbnails, arrow keys, and touch swipes. Clicking the main image opens a modal lightbox; Escape closes it and restores focus. Originals are preserved; photos fit without cropping in the main view and lightbox.

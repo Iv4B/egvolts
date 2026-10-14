@@ -21,11 +21,6 @@ function closeMenuWithKeyboard() {
   menuOpen.value = false
   menuToggle.value?.focus()
 }
-const projects = [
-  { number: '01', type: 'DZĪVOJAMĀS TELPAS', title: 'Gaišāks mājoklis.', text: 'Dzīvokļa atjaunošanas piemērs: pārdomāts apgaismojums, jauna elektroinstalācija un sakārtota sadalne.', detail: 'Pilna elektroinstalācija · Dzīvoklis', className: 'home' },
-  { number: '02', type: 'KOMERCTELPAS', title: 'Gatavs darbam.', text: 'Darba telpu iekārtošanas piemērs ar ērti izvietotām kontaktligzdām un ikdienas darbam piemērotu apgaismojumu.', detail: 'Apgaismojums un elektroapgāde · Darba telpas', className: 'work' },
-  { number: '03', type: 'APKOPE', title: 'Atkal droši un uzticami.', text: 'Apkopes projekta piemērs: bojājumu diagnostika, detaļu nomaiņa un elektroinstalācijas pārbaude.', detail: 'Pārbaude un apkope · Īpašums', className: 'service' },
-]
 const skills = [
   { title: 'Elektroinstalācija', text: 'Vadi, kontaktligzdas, slēdži un sadalnes — pārdomāta un vienota sistēma.' },
   { title: 'Apgaismojuma risinājumi', text: 'Ērts ikdienas apgaismojums, akcentu gaismas un energoefektīvi LED risinājumi.' },
@@ -76,15 +71,8 @@ const skills = [
 
     <section id="projects" class="projects section" aria-labelledby="projects-title"><div class="container">
       <div class="section-label"><span>02 / PAVEIKTIE PROJEKTI</span><span class="label-line" /></div>
-      <div class="section-heading"><h2 id="projects-title">No ieceres līdz rezultātam.</h2><p>Daži piemēri tam, kā varētu izskatīties projekts.<br>Projektu paraugi — aizstājiet ar saviem paveiktajiem darbiem.</p></div>
-      <div class="project-grid"><article v-for="project in projects" :key="project.number" class="project">
-        <div class="project-visual" :class="project.className" aria-hidden="true"><span class="project-number">{{ project.number }}</span>
-          <svg v-if="project.className === 'home'" viewBox="0 0 320 230" fill="none"><path d="M45 190V90L160 28L275 90V190H45ZM90 190V115H140V190M180 115H230V155H180Z"/><path class="accent-stroke" d="M160 28V75M145 75H175L185 95H135Z"/><path d="M32 200H288"/></svg>
-          <svg v-else-if="project.className === 'work'" viewBox="0 0 320 230" fill="none"><path d="M55 190V40H265V190M35 190H285M90 70H125V100H90ZM145 70H180V100H145ZM200 70H235V100H200ZM90 120H125V150H90ZM145 120H180V150H145ZM200 120H235V150H200Z"/><path class="accent-stroke" d="M145 190V170H180V190"/></svg>
-          <svg v-else viewBox="0 0 320 230" fill="none"><path d="M85 40H235V190H85ZM105 60H215V100H105ZM110 125V150M140 125V150M180 125V150M210 125V150M110 165H140M180 165H210"/><path class="accent-stroke" d="M160 65L150 81H168L158 95"/></svg>
-          <span class="visual-caption">EGVOLTS / PROJEKTA PARAUGS</span>
-        </div><div class="project-meta"><span>{{ project.type }}</span><span aria-hidden="true"><ArrowIcon /></span></div><h3>{{ project.title }}</h3><p>{{ project.text }}</p><p class="project-detail">{{ project.detail }}</p>
-      </article></div>
+      <div class="section-heading"><h2 id="projects-title">Darbi tuvplānā.</h2><p>Elektroinstalācijas un sadalņu fotogalerija.<br>Izvēlieties attēlu, lai apskatītu to tuvāk.</p></div>
+      <ProjectGallery />
     </div></section>
 
     <section id="skills" class="skills container section" aria-labelledby="skills-title"><div class="section-label"><span>03 / PRASMES</span><span class="label-line" /></div>
