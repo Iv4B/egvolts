@@ -94,7 +94,7 @@ const skills = [
     <section id="contact" class="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">04 / KONTAKTI</p><h2 id="contact-title">Veidosim<br>labu sadarbību<span class="lime">.</span></h2><p>Ir iecere? Sāksim ar sarunu.</p></div><div class="contact-details"><p class="contact-note">Kontaktinformācijas paraugs — aizstājiet pirms publicēšanas.</p><a href="mailto:hello@egvolts.example"><small>E-PASTS</small><span>hello@egvolts.example <b aria-hidden="true"><ArrowIcon /></b></span></a><div class="contact-location"><small>ATRAŠANĀS VIETA</small><span>Jūsu pilsēta, Latvija</span></div><p>Bez veidlapām. Vienkārši sazinieties tieši.</p></div></div></section>
   </main>
 
-  <footer class="container site-footer"><a href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="140" height="78"></a><p>Elektroinstalācija un apkalpošana</p></footer>
+  <footer class="container site-footer"><a href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="240" height="134"></a></footer>
   <button v-if="showBackToTop" class="back-to-top" type="button" aria-label="Atgriezties augšā" title="Atgriezties augšā" @click="backToTop">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg>
   </button>
