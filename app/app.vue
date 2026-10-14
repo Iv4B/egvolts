@@ -4,14 +4,21 @@ const menuOpen = ref(false)
 const menuToggle = ref<HTMLButtonElement | null>(null)
 const topLink = ref<HTMLAnchorElement | null>(null)
 const showBackToTop = ref(false)
+const footer = ref<HTMLElement | null>(null)
+const footerOverlap = ref(0)
 function updateScrollPosition() {
   showBackToTop.value = window.scrollY > 200
+  footerOverlap.value = Math.max(0, window.innerHeight - (footer.value?.getBoundingClientRect().top ?? window.innerHeight))
 }
 onMounted(() => {
   updateScrollPosition()
   window.addEventListener('scroll', updateScrollPosition, { passive: true })
+  window.addEventListener('resize', updateScrollPosition)
 })
-onBeforeUnmount(() => window.removeEventListener('scroll', updateScrollPosition))
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateScrollPosition)
+  window.removeEventListener('resize', updateScrollPosition)
+})
 function backToTop() {
   topLink.value?.focus({ preventScroll: true })
   window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
@@ -82,8 +89,16 @@ const skills = [
     <section id="contact" class="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">04 / KONTAKTI</p><h2 id="contact-title">Veidosim<br>labu sadarbību<span class="lime">.</span></h2><p>Ir iecere? Sāksim ar sarunu.</p></div><div class="contact-details"><p class="contact-note">Kontaktinformācijas paraugs — aizstājiet pirms publicēšanas.</p><a href="mailto:hello@egvolts.example"><small>E-PASTS</small><span>hello@egvolts.example <b aria-hidden="true"><ArrowIcon /></b></span></a><div class="contact-location"><small>ATRAŠANĀS VIETA</small><span>Jūsu pilsēta, Latvija</span></div><p>Bez veidlapām. Vienkārši sazinieties tieši.</p></div></div></section>
   </main>
 
-  <footer class="container site-footer"><a href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="240" height="134"></a></footer>
-  <button v-if="showBackToTop" class="back-to-top" type="button" aria-label="Atgriezties augšā" title="Atgriezties augšā" @click="backToTop">
+  <footer ref="footer" class="container site-footer">
+    <a class="footer-logo" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="240" height="134"></a>
+    <div class="company-details">
+      <h3>SIA EG Volts</h3>
+      <p>Reģistrācijas Nr.: 40203784193</p>
+      <p>PVN maksātāja Nr.: LV40203784193</p>
+      <address>Straupes iela 10A, Valmiera, Valmieras nov., LV-4201</address>
+    </div>
+  </footer>
+  <button v-if="showBackToTop" class="back-to-top" :style="{ transform: `translateY(-${footerOverlap}px)` }" type="button" aria-label="Atgriezties augšā" title="Atgriezties augšā" @click="backToTop">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg>
   </button>
 </template>

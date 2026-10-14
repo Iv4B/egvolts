@@ -98,8 +98,16 @@ h3 { font-size: 23px; letter-spacing: -.03em; margin-bottom: 12px; }
 .contact-location span { font-size: 18px; }
 .contact-details .contact-note { font-size: 14px; color: #c2cacd; }
 .contact-details > p:last-child { font-size: 14px; }
-.site-footer { display: flex; justify-content: center; align-items: center; padding-block: 40px; }
+.site-footer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 48px; padding-block: 40px; }
+.footer-logo { justify-self: center; }
 .site-footer img { width: 240px; }
+.company-details h3 { margin-bottom: 16px; }
+.company-details p { font-size: 16px; margin-bottom: 8px; }
+.company-details address { font-size: 16px; font-style: normal; line-height: 1.7; }
+@media (max-width: 600px) {
+  .site-footer { grid-template-columns: 1fr; gap: 28px; }
+  .company-details { text-align: center; }
+}
 .back-to-top { position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 20; display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 3px; color: var(--ink); background: var(--lime); cursor: pointer; }
 .back-to-top svg { display: block; width: 24px; height: 24px; }
 .back-to-top:hover { background: #c0d45e; }
