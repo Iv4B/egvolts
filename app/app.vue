@@ -71,7 +71,7 @@ const skills = [
     <section id="about" class="about container section" aria-labelledby="about-title">
       <div class="section-label"><span>PAR MANI</span><span class="label-line" /></div>
       <div class="about-layout"><div><p class="eyebrow">CILVĒKS AIZ PAVEIKTĀ DARBA</p><h2 id="about-title">Praktiska domāšana.<br>Personīga pieeja.</h2></div><div class="about-copy"><p class="lead">Sveiki! Es esmu cilvēks aiz EGVolts. Manuprāt, kvalitatīvi elektrodarbi sākas ar ieklausīšanos un noslēdzas ar rūpīgi paveiktām detaļām.</p><p>Šis ir iepazīstināšanas teksta paraugs. Šeit pastāstiet par sevi, savu pieredzi un vietām, kur strādājat. Dalieties ar to, kas jums ir svarīgs un kāda ir jūsu pieeja katram projektam.</p><a class="text-link" href="#contact">Pārrunāsim jūsu projektu <span aria-hidden="true"><ArrowIcon /></span></a></div></div>
-      <div class="principles"><span><b>01</b> Skaidra saziņa</span><span><b>02</b> Pārdomāta plānošana</span><span><b>03</b> Uzmanība detaļām</span></div>
+      <div class="principles"><span><span class="status-dot" /> Skaidra saziņa</span><span><span class="status-dot" /> Pārdomāta plānošana</span><span><span class="status-dot" /> Uzmanība detaļām</span></div>
     </section>
 
     <section id="projects" class="projects section" aria-labelledby="projects-title"><div class="container">
