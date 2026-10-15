@@ -69,22 +69,22 @@ const skills = [
     <div class="service-strip"><div class="container"><span>UZSTĀDĪŠANA</span><img class="strip-bolt" :src="`${baseURL}egvolts-symbol.svg`" alt="" aria-hidden="true" width="414" height="516"><span>APGAISMOJUMS</span><img class="strip-bolt" :src="`${baseURL}egvolts-symbol.svg`" alt="" aria-hidden="true" width="414" height="516"><span>APKOPE</span><img class="strip-bolt" :src="`${baseURL}egvolts-symbol.svg`" alt="" aria-hidden="true" width="414" height="516"><span>REMONTS</span></div></div>
 
     <section id="about" class="about container section" aria-labelledby="about-title">
-      <div class="section-label"><span>01 / PAR MANI</span><span class="label-line" /></div>
+      <div class="section-label"><span>PAR MANI</span><span class="label-line" /></div>
       <div class="about-layout"><div><p class="eyebrow">CILVĒKS AIZ PAVEIKTĀ DARBA</p><h2 id="about-title">Praktiska domāšana.<br>Personīga pieeja.</h2></div><div class="about-copy"><p class="lead">Sveiki! Es esmu cilvēks aiz EGVolts. Manuprāt, kvalitatīvi elektrodarbi sākas ar ieklausīšanos un noslēdzas ar rūpīgi paveiktām detaļām.</p><p>Šis ir iepazīstināšanas teksta paraugs. Šeit pastāstiet par sevi, savu pieredzi un vietām, kur strādājat. Dalieties ar to, kas jums ir svarīgs un kāda ir jūsu pieeja katram projektam.</p><a class="text-link" href="#contact">Pārrunāsim jūsu projektu <span aria-hidden="true"><ArrowIcon /></span></a></div></div>
       <div class="principles"><span><b>01</b> Skaidra saziņa</span><span><b>02</b> Pārdomāta plānošana</span><span><b>03</b> Uzmanība detaļām</span></div>
     </section>
 
     <section id="projects" class="projects section" aria-labelledby="projects-title"><div class="container">
-      <div class="section-label"><span>02 / PAVEIKTIE PROJEKTI</span><span class="label-line" /></div>
+      <div class="section-label"><span>PAVEIKTIE PROJEKTI</span><span class="label-line" /></div>
       <div class="section-heading"><h2 id="projects-title">Darbi tuvplānā.</h2></div>
       <ProjectGallery />
     </div></section>
 
-    <section id="skills" class="skills container section" aria-labelledby="skills-title"><div class="section-label"><span>03 / PRASMES</span><span class="label-line" /></div>
-      <div class="skills-layout"><div><p class="eyebrow">PRAKTISKAS ZINĀŠANAS</p><h2 id="skills-title">Piemērotas prasmes.<br>Katrai detaļai.</h2><p class="skills-intro">No neliela uzlabojuma līdz pilnai elektroinstalācijai — rūpīga pieeja ir svarīga katrā darbā.</p><span class="skills-note">Pakalpojumu aprakstu paraugi</span></div><div class="skill-list"><article v-for="(skill, index) in skills" :key="skill.title"><span class="skill-index">0{{ index + 1 }}</span><div><h3>{{ skill.title }}</h3><p>{{ skill.text }}</p></div></article></div></div>
+    <section id="skills" class="skills container section" aria-labelledby="skills-title"><div class="section-label"><span>PRASMES</span><span class="label-line" /></div>
+      <div class="skills-layout"><div><p class="eyebrow">PRAKTISKAS ZINĀŠANAS</p><h2 id="skills-title">Piemērotas prasmes.<br>Katrai detaļai.</h2><p class="skills-intro">No neliela uzlabojuma līdz pilnai elektroinstalācijai — rūpīga pieeja ir svarīga katrā darbā.</p><span class="skills-note">Pakalpojumu aprakstu paraugi</span></div><div class="skill-list"><article v-for="skill in skills" :key="skill.title"><span class="status-dot" aria-hidden="true" /><div><h3>{{ skill.title }}</h3><p>{{ skill.text }}</p></div></article></div></div>
     </section>
 
-    <section id="contact" class="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">04 / KONTAKTI</p><h2 id="contact-title">Veidosim<br>labu sadarbību<span class="lime">.</span></h2><p>Ir iecere? Sāksim ar sarunu.</p></div><div class="contact-details"><p class="contact-note">Kontaktinformācijas paraugs — aizstājiet pirms publicēšanas.</p><a href="mailto:hello@egvolts.example"><small>E-PASTS</small><span>hello@egvolts.example <b aria-hidden="true"><ArrowIcon diagonal /></b></span></a><div class="contact-location"><small>ATRAŠANĀS VIETA</small><span>Jūsu pilsēta, Latvija</span></div><p>Bez veidlapām. Vienkārši sazinieties tieši.</p></div></div></section>
+    <section id="contact" class="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">KONTAKTI</p><h2 id="contact-title">Veidosim<br>labu sadarbību<span class="lime">.</span></h2><p>Ir iecere? Sāksim ar sarunu.</p></div><div class="contact-details"><p class="contact-note">Kontaktinformācijas paraugs — aizstājiet pirms publicēšanas.</p><a href="mailto:hello@egvolts.example"><small>E-PASTS</small><span>hello@egvolts.example <b aria-hidden="true"><ArrowIcon diagonal /></b></span></a><div class="contact-location"><small>ATRAŠANĀS VIETA</small><span>Jūsu pilsēta, Latvija</span></div><p>Bez veidlapām. Vienkārši sazinieties tieši.</p></div></div></section>
   </main>
 
   <footer ref="footer" class="container site-footer">
