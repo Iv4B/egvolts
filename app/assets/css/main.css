@@ -85,7 +85,7 @@ h3 { font-size: 23px; letter-spacing: -.03em; margin-bottom: 12px; }
 .skill-list article { display: flex; align-items: flex-start; gap: 23px; padding-block: 26px; border-top: 1px solid var(--line); }
 .skill-list article:first-child { padding-top: 0; border: 0; }
 .skill-list article:last-child { padding-bottom: 0; }
-.skill-index { color: #68752c; font-size: 14px; margin-top: 5px; }
+.skill-list .status-dot { flex-shrink: 0; margin: 9px 0 0; }
 .skill-list h3 { font-size: 21px; }
 .skill-list p { font-size: 16px; color: #616d73; margin: 0; max-width: 380px; }
 .contact { background: var(--ink); color: #f6f7f2; padding-block: 90px; }
