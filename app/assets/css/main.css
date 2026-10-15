@@ -1,7 +1,16 @@
-:root { --ink: #34424a; --grey: #818b91; --lime: #afc448; --paper: #fafbf8; --line: #dfe3dd; font-family: 'Helvetica Neue', Arial, sans-serif; color: var(--ink); background: var(--paper); font-synthesis: none; }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  src: url('../fonts/Roboto-Variable.woff') format('woff');
+}
+:root { --ink: #34424a; --grey: #818b91; --lime: #afc448; --paper: #fafbf8; --line: #dfe3dd; font-family: 'Roboto', Arial, sans-serif; color: var(--ink); background: var(--paper); font-synthesis: none; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 30px; }
 body { margin: 0; }
+button, input, select, textarea { font-family: inherit; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a:focus-visible { outline: 3px solid var(--ink); outline-offset: 6px; }
