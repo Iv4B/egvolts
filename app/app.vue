@@ -39,7 +39,7 @@ const skills = [
 <template>
   <a class="skip-link" href="#main">Pāriet uz saturu</a>
   <header class="site-header" @keydown.esc="closeMenuWithKeyboard">
-    <a ref="topLink" class="brand" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="180" height="100"></a>
+    <a ref="topLink" class="brand" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo-clean.svg`" alt="EGVolts" width="1468" height="956"></a>
     <button ref="menuToggle" class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-controls="main-navigation" :aria-label="menuOpen ? 'Aizvērt izvēlni' : 'Atvērt izvēlni'" @click="menuOpen = !menuOpen">
       <span>{{ menuOpen ? 'Aizvērt' : 'Izvēlne' }}</span>
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path v-if="menuOpen" d="m6 6 12 12M6 18 18 6" /><path v-else d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -66,7 +66,7 @@ const skills = [
       </div>
     </section>
 
-    <div class="service-strip"><div class="container"><span>UZSTĀDĪŠANA</span><span class="strip-bolt" aria-hidden="true">ϟ</span><span>APGAISMOJUMS</span><span class="strip-bolt" aria-hidden="true">ϟ</span><span>APKOPE</span><span class="strip-bolt" aria-hidden="true">ϟ</span><span>REMONTS</span></div></div>
+    <div class="service-strip"><div class="container"><span>UZSTĀDĪŠANA</span><img class="strip-bolt" :src="`${baseURL}egvolts-symbol.svg`" alt="" aria-hidden="true" width="414" height="516"><span>APGAISMOJUMS</span><img class="strip-bolt" :src="`${baseURL}egvolts-symbol.svg`" alt="" aria-hidden="true" width="414" height="516"><span>APKOPE</span><img class="strip-bolt" :src="`${baseURL}egvolts-symbol.svg`" alt="" aria-hidden="true" width="414" height="516"><span>REMONTS</span></div></div>
 
     <section id="about" class="about container section" aria-labelledby="about-title">
       <div class="section-label"><span>01 / PAR MANI</span><span class="label-line" /></div>
@@ -88,7 +88,7 @@ const skills = [
   </main>
 
   <footer ref="footer" class="container site-footer">
-    <a class="footer-logo" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo.svg`" alt="EGVolts" width="240" height="134"></a>
+    <a class="footer-logo" href="#" aria-label="EGVolts sākumlapa"><img :src="`${baseURL}egvolts-logo-lv.svg`" alt="EGVolts — elektroinstalācija un apkalpošana" width="1672" height="1203"></a>
     <div class="company-details">
       <h3>SIA EG Volts</h3>
       <p>Reģistrācijas Nr.: 40203784193</p>
