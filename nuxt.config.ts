@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     head: {
       title: 'EGVolts — Elektroinstalācija un apkalpošana',
       htmlAttrs: { lang: 'lv' },
-      link: [{ rel: 'icon', type: 'image/svg+xml', sizes: 'any', href: `${process.env.NUXT_APP_BASE_URL || '/'}egvolts-mark.svg` }],
+      link: [{ rel: 'icon', type: 'image/svg+xml', sizes: 'any', href: `${process.env.NUXT_APP_BASE_URL || '/'}egvolts-symbol.svg` }],
       meta: [{ name: 'description', content: 'Iepazīstiet EGVolts. Apskatiet elektroinstalācijas, apgaismojuma, apkopes un remonta projektu piemērus un sazinieties tieši.' }],
     },
   },
